@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../servico/firebase.service';
 
 
 @Component({
@@ -6,15 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './listacliente.component.html',
   styleUrls: ['./listacliente.component.css']
 })
-export class ListaclienteComponent {
+export class ListaclienteComponent implements OnInit{
 
-  clientes = [
-    {
-      title: "Nayeon",
-      age: "26",
-      situacao: "Cliente VIP",
-      img: "https://portalpopline.com.br/wp-content/uploads/2022/05/FTDRc6UWAAAt7c2.jpg"
-    }
-  ];
+  clientes = [];  
+
+  constructor(private fs: FirebaseService){}
+  
+  ngOnInit(): void {
+      this.fs.consultaDados().subscribe(caixinha => this.clientes = caixinha);
+  }
 
 }

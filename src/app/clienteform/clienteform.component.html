@@ -1,1 +1,47 @@
-<p>clienteform works!</p>
+<div class="container mt-5">
+    <h1 class="text-center">Formulario data driven</h1>
+
+    <form [formGroup]="formDataDriven" (submit)="cadastrar()">
+        <div class="row mt-3">
+            <div class="col">
+                <label>Informe o nome do cliente</label>
+                <input class="form-control" type="text"  placeholder="Informe o nome do cliente" formControlName="nome">
+            </div>
+        </div>
+
+        <div class="col">
+            <label>Foto do cliente</label>
+            <input class="form-control" type="image"  placeholder="Foto do cliente" formControlName="img">
+        </div>
+    </div>
+
+       <div class="row mt-3">
+            <div class="col">
+                <label>Informe a idade do cliente</label>
+                <input class="form-control" type="text"  placeholder="Informe a idade do cliente" formControlName="idade">
+            </div>
+       </div>
+
+       <div class="row mt-3">
+        <div class="col">
+            <label>Informe o e-mail para contato</label>
+            <input class="form-control" type="email"  placeholder="Informe p e-mail para contato" formControlName="email">
+        </div>
+   </div>
+
+        
+       <div class="row mt-3">
+            <div class="col">
+                <label>Informe a situação do cliente</label>
+                <input class="form-control" type="text"  placeholder="Informe sua situação" formControlName="situacao">
+            </div>
+       </div>
+       
+
+       <div class="row">
+            <div class="col">
+                <button class="btn btn-primary mt-3" type="submit" [disabled]="!formDataDriven.valid">Enviar</button>
+            </div>
+       </div>        
+    </form>
+</div>
