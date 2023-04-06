@@ -10,6 +10,20 @@
                   <h5 class="card-title">{{foto.situacao}}</h5>
                 </div>
               </div>
+
+               <!-- Botão excluir -->
+               <div class="row">
+                <div class="col">
+                  <button class="btn btn-danger btn-block mb-3" (click)="excluir(foto.id)"> Excluir </button>
+                </div>
+              </div>
+
+              <!--Botão Editar-->
+              <div class="row">
+                <div class="col">
+                  <button class="btn btn-success btn-block" [routerLink]="['/update', foto.id]"> Editar </button>
+                </div>
+              </div>
         </div>
     </div>
 </div>

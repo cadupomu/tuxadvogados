@@ -24,8 +24,9 @@ export class ClienteformComponent implements OnInit{
   validaForm(){
     this.formDataDriven = this.tux.group({
       nome: ['', [Validators.required, Validators.minLength(3)]],
+      img: ['', [Validators.required, Validators.minLength(3)]],
       idade: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.minLength(3)]],
       situacao: ['', [Validators.required, Validators.minLength(3)]]
     })
   }

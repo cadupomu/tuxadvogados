@@ -17,4 +17,8 @@ export class ListaclienteComponent implements OnInit{
       this.fs.consultaDados().subscribe(caixinha => this.clientes = caixinha);
   }
 
+  excluir(id){
+    this.fs.excluirDados(id);
+    alert('Cliente deletado');
+  }
 }

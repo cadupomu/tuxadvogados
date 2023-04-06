@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <div class="row justify-content-center" style="margin-top: 20%;">
+        <div class="col-6 ">
+            <div class="card shadow">
+                <div class="card-header text-center">
+                  {{ titulo }}
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="formulario" (submit)="formAuth()">
+                        <div class="form-group  mt-2">
+                          <label>Endereço de email</label>
+                          <input type="email" class="form-control"  placeholder="Seu email" formControlName="email">
+                        </div>
+                        <div class="form-group mt-2">
+                          <label>Senha</label>
+                          <input type="password" class="form-control"  placeholder="Senha" formControlName="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-2">{{ nameButtonForm }}</button>
+                    </form>
+                </div>
+              </div>
+        </div>
+    </div>   
+    <div class="row justify-content-center mt-2 text-center">
+        <div class="col-6">
+            <button class="btn btn-outline-secondary shadow" (click)="alterar()">{{ nameButtonCadastrar }}</button>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2 text-center">
+      <div class="col-6">
+          <button class="btn btn-outline-secondary shadow" (click)="deslogar()">Sair</button>
+      </div>
+  </div>
+</div>

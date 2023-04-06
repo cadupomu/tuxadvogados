@@ -20,6 +20,10 @@ export class FirebaseService implements OnInit{
         
     }
 
+    consultaUm(id){
+        return this.colector.doc(id).valueChanges();
+    }
+
     consultaDados(){
         return this.colector.snapshotChanges().pipe(
             map(actions => {

@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environments';
+import { FormupdateComponent } from './formupdate/formupdate.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { environment } from 'src/environments/environments';
     ListaclienteComponent,
     HomeComponent,
     HeaderComponent,
-    FotoComponent
+    FotoComponent,
+    FormupdateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
