@@ -1,17 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-  
-    
-      <a class="navbar-brand" href="#">Tux Advogados</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" routerLink="/">Início</a>
-          <a class="nav-item nav-link" routerLink="clientes">Clientes</a>
-          <a class="nav-item nav-link" routerLink="form">Formulário</a>
-        </div>
-      </div>
-    </div>
+
+ <nav *ngIf="header == true">
+    <div class="nav-wrapper container ">
+      <p class="brand-logo">Tux Advogados</p>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a routerLink="/">Início</a></li>
+        <li><a routerLink="/lista">Clientes</a></li>
+        <li><a routerLink="/form">Cadastrar Cliente</a></li>
+        <li><a (click)="deslogar()">Sair</a></li>
+      </ul>
+    </div>b
   </nav>

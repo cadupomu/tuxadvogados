@@ -41,9 +41,11 @@ export class FormupdateComponent implements OnInit {
 
   createForm(dados){
     this.updateForm = this.formBuilder.group({
-      titulo: [dados.titulo],
-      url: [dados.url],
-      descricao: [dados.descricao]
+      nome:[dados.nome],
+      img: [dados.img],
+      idade: [dados.idade],
+      email: [dados.email],
+      situacao:[dados.situacao]
     })
   }
 

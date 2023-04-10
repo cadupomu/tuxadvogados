@@ -1,38 +1,31 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { AngularFireModule } from "@angular/fire/compat";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FotoComponent } from './foto/foto.component';
-import { ClienteformComponent } from './clienteform/clienteform.component';
-import { ListaclienteComponent } from './listacliente/ListaclienteComponent';
-import { HomeComponent } from './home/home.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { environment } from 'src/environments/environments';
-import { FormupdateComponent } from './formupdate/formupdate.component';
-import { LoginComponent } from './login/login.component';
+import { AppComponent } from "./app.component";
+import { environment } from "src/environments/environments";
+
+import { TuxModule } from "./modules/tux.module";
+import { HomeModule } from "./modules/home.module";
+
+import { LoginModule } from "./modules/login.module";
+import { CoreModule } from "./core/core.module";
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClienteformComponent,
-    ListaclienteComponent,
-    HomeComponent,
-    HeaderComponent,
-    FotoComponent,
-    FormupdateComponent,
-    LoginComponent
+       
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule, 
-    ReactiveFormsModule,
+
+  imports: [   
+    
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    TuxModule,
+    HomeModule,
+    LoginModule,
+    CoreModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
